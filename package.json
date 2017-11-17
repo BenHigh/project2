@@ -1,0 +1,24 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenHigh/project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenHigh/project2/issues"
+  },
+  "homepage": "https://github.com/BenHigh/project2#readme",
+  "dependencies": {
+    "mysql2": "^1.5.0",
+    "sequelize": "^4.22.7"
+  }
+}
