@@ -4,7 +4,22 @@
 
 var htmlCont = require('../controllers/html');
 module.exports = function(app) {
-  app.get('/', htmlCont.renderHome);
+	app.get("/", function(req, res) {
+		res.sendFile(path.join(__dirname, "../public/index.html"));
+	});
+
+	// Route to the cms page
+	app.get("/about", function(req, res) {
+		res.sendFile(path.join(__dirname, "../public/about.html"));
+	});
+
+	// blog route loads blog.html
+	app.get("/contact", function(req, res) {
+		res.sendFile(path.join(__dirname, "../public/contact.html"));
+	});
+  // app.get('/', htmlCont.renderHome);
+  // app.get('/corp', htmlCont.renderCorForm);
+  // app.get('/client', htmlCont.renderCusForm);
 };
 
 // // Dependencies
