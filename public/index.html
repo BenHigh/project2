@@ -6,30 +6,54 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<title>Project 2!</title>
+		<title>CCMatch</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">#CCMatch#</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
+		<!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-12 phone-nav">
+              <a class="navbar-brand" href="#" id="logo">CCMatch</a>
+            </div>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
 		<section>
-			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-4" style="background-color:lightgray"><a href="/corp">Corporate</a></div>
-				<div class="col-md-1"></div>
-				<div class="col-md-1"></div>
-				<div class="col-md-4" style="background-color:lightgray"><a href="/client">Client</a></div>
-				<div class="col-md-1"></div>
-			</div>
+			 <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1>
+                <span class="fa fa-lock"></span>Welcome to CCMatch!</h1>
+
+            <p>Please select your portal:</p>
+
+            <a href="/corp" class="btn btn-default">
+                <span class="fa fa-user"></span> Corporate Portal</a>
+            <a href="/client" class="btn btn-default">
+                <span class="fa fa-user"></span> Client Portal</a>
+        </div>
+
+    </div>
 		</section>
 	</body>
 </html>
