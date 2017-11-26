@@ -21,6 +21,9 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.5.0",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "psql": "0.0.1",
     "sequelize": "^4.22.7"
   }
 }
