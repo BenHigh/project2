@@ -2,7 +2,6 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -10,88 +9,61 @@
     <title>Corporate Login</title>
   </head>
   <body>
-
-
-
-
-
-
-    
-    <div class="row">
-      <div class="col-md-4"></div>
-        <div class="container"><h1>Login or Create A New Account</h1></div>
-        <div id="exTab1" class="container">
-          <ul  class="nav nav-pills">
-            <li class="active">
-              <a  href="#1a" data-toggle="tab">Login</a>
-            </li>
-            <li><a href="#2a" data-toggle="tab">Create Account</a>
-          </li>
-        </ul>
-        <div class="tab-content clearfix">
-          <div class="tab-pane active" id="1a">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4"><h1>Login</h1></div>
-                <div class="col-md-4"></div>
-              </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-12 phone-nav">
+              <a class="navbar-brand" href="#" id="logo">CCMatch</a>
             </div>
-            
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                  <form action="/login" method="Post">
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">Email</label>
-                      <input type="text" class="form-control" id="Input1" placeholder="Email" name="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlSelect1">Password</label>
-                      <input type="text" class="form-control" id="Input2" placeholder="Password" name="Password">
-                    </div>
-                    <button type="submit" class="btn btn-default">Login</button>
-                    <button type="submit" class="btn btn-default">Create Account</button>
-                  </form>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="corLogin.html">Login</a></li>
+            </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><strong>Login</strong></h3>
+              </div>
+              <div class="panel-body">
+                <form action="" method="POST" role="form">
+                  
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+                  </div>
+                </form>
+                <br>
+                <div class="text-right">
+                  <button type="submit" class="btn btn-primary btn-md" id="add-btn">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-md" id="add-btn">Create Account</button>
                 </div>
-                <div class="col-md-4"></div>
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="2a">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4"><h1>Create Account</h1></div>
-                <div class="col-md-4"></div>
-              </div>
-            </div>
-            
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <form action="/login" method="Post">
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">User Name</label>
-                      <input type="text" class="form-control" id="Input3" placeholder="User Name" name="username">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">Email</label>
-                      <input type="text" class="form-control" id="Input4" placeholder="Email" name="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlSelect1">Password</label>
-                      <input type="text" class="form-control" id="Input5" placeholder="Password" name="Password">
-                    </div>
-                    <button type="submit" class="btn btn-default">Login</button>
-                    <button type="submit" class="btn btn-default">Create Account</button>
-                  </form>
-                </div>
-              </div>
-            </div>
+          <div class="col-md-4"></div>
         </div>
-    </div>
-  </div>
-</body>
-</html>
+      </body>
+    </html>
