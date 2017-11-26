@@ -1,0 +1,49 @@
+
+
+body {
+	background: lightgrey;
+}
+
+.container .jumbotron {
+	border-radius: 10px;
+	border: 2px solid black;
+}
+
+#socMedCont {
+	margin: 0 auto;
+	width: 80%;
+	border-radius: 10px;
+	border: 2px solid black;
+	background: grey;
+}
+
+#loginTab {
+	padding: 0;
+	max-width: 100%;
+}
+
+.icon {
+	width: 33.3%;
+}
+
+.tab-content {
+	margin: 25px;
+	margin-top: 0;
+	padding: 10px;
+	min-height: 200px;
+	border: 2px solid black;
+	background: lightgrey;
+}
+
+.nav-pills {
+	margin: 0 25px;
+	border: 2px solid black;
+}
+
+.nav-pills>li+li {
+	border: 2px solid purple;
+	margin: 0;
+}
+#pills li>.active{
+	background: red;
+}
