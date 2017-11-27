@@ -2,58 +2,87 @@
 <html lang="en-us">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<title>CCMatch</title>
 	</head>
 	<body>
 		<!-- Start of navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid navbar-custom">
+	    <nav class="navbar navbar-default">
+	      	<div class="container-fluid navbar-custom">
+	        <!-- Brand and toggle get grouped for better mobile display -->
+	        	<div class="row">
+	          		<div class="navbar-header">
+	            		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+	            		</button>
+			            <div class="col-xs-12 phone-nav">
+			              	<a class="navbar-brand" href="#" id="logo">CCMatch</a>
+			            </div>
+			        </div>
 
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="row">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <div class="col-xs-12 phone-nav">
-              <a class="navbar-brand" href="#" id="logo">CCMatch</a>
-            </div>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right navbar-right-custom">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div>
-      </div><!-- /.container-fluid -->
-    </nav>
+	          <!-- Collect the nav links, forms, and other content for toggling -->
+	          		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+			              <li><a href="index.html">Home</a></li>
+			              <li><a href="about.html">About</a></li>
+			              <li><a href="contact.html">Contact</a></li>
+			            </ul>
+	          		</div><!-- /.navbar-collapse -->
+	        	</div>
+	      	</div><!-- /.container-fluid -->
+	    </nav>
 		<section>
-			 <div class="container">
+			<div class="container">
+		        <div class="jumbotron text-center">
+		            <h1><span class="fa fa-lock"></span>Welcome to CCMatch!</h1>
 
-        <div class="jumbotron text-center">
-            <h1>
-                <span class="fa fa-lock"></span>Welcome to CCMatch!</h1>
+		            <p>Please select your portal:</p>
 
-            <p>Please select your portal:</p>
-
-            <a href="/corp" class="btn btn-default">
-                <span class="fa fa-user"></span> Corporate Portal</a>
-            <a href="/client" class="btn btn-default">
-                <span class="fa fa-user"></span> Client Portal</a>
-        </div>
-
-    </div>
+		            <a href="/corp" class="btn btn-default">
+		                <span class="fa fa-user"></span> Corporate Portal
+		            </a>
+		            <a href="/client" class="btn btn-default">
+		                <span class="fa fa-user"></span> Client Portal
+		            </a>
+		        </div>
+   			</div>
 		</section>
+		<div id="socMedCont">
+			<div class="container" ><h2>Login with Social Media</h2></div>
+			<div id="loginTab" class="container">	
+				<ul  class="nav nav-pills" id="pills">
+					<li class="active icon text-center">
+						<a href="#twitTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/twitter.png"></a>
+					</li>
+				
+					<li class="icon text-center">
+						<a href="#fbTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/facebook.png"></a>
+					</li>
+				
+					<li class="icon text-center">
+						<a href="#liTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/linkedin.png"></a>
+					</li>
+				</ul>
+
+				<div class="tab-content clearfix">
+				  	<div class="tab-pane active" id="twitTab">
+			          	<h3>Same as example 1 but we have now styled the tab's corner</h3>
+					</div>
+					<div class="tab-pane" id="fbTab">
+			          	<h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+					</div>
+			        <div class="tab-pane" id="liTab">
+			          	<h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+					</div>
+				</div>
+		 	</div>
+		 </div>
 	</body>
+	<script src="js/index.js"></script>
 </html>

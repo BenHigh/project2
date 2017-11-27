@@ -1,7 +1,7 @@
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
-var apiCont = require('../controllers/api');
+var apiCont = require('../controllers/apicont');
 module.exports = function(app) {
   app.get('/test', apiCont.index);
 
