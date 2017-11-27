@@ -4,6 +4,14 @@
 var apiCont = require('../controllers/api');
 module.exports = function(app) {
   app.get('/test', apiCont.index);
+
+  // POST route for saving a new post
+  app.post("/api/posts", function(req, res) {
+    db.Post.create(req.body).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
 };
 
 
@@ -49,12 +57,7 @@ module.exports = function(app) {
 //     });
 //   });
 
-  // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
-    db.Post.create(req.body).then(function(dbPost) {
-      res.json(dbPost);
-    });
-  });
+
 
 //   // DELETE route for deleting posts
 //   app.delete("/api/posts/:id", function(req, res) {
