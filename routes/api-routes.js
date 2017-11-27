@@ -1,7 +1,7 @@
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
-var personalityResults = require("../personalityInsights.js");
+// var personalityResults = require("../personalityInsights.js");
 var db = require("../models");
 var apiCont = require('../controllers/apicont');
 module.exports = function(app) {
