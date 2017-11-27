@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "postgres",
-    "port": 5432,
-    "password": "Tw166250!",
-    "database": "matchmade_db",
+    "username": "root",
+    "port": 3306,
+    "password": null,
+    "database": "proj2_db",
     "host": "localhost",
-    "dialect": "postgres"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

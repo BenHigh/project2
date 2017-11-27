@@ -9,7 +9,8 @@ module.exports = function(app) {
 
   app.post("/contact", function(req, res) {
   	var email = req.body.email;
-  	console.log(email);
+  	console.log(email),
+  	console.log(req.body);
     // db.Post.create(req.body).then(function(dbPost) {
     //   res.json(dbPost);
     // });
@@ -67,7 +68,7 @@ module.exports = function(app) {
 //     });
 //   });
 
-<<<<<<< HEAD
+
   // // POST route for saving a new post
   // app.post("/contact", function(req, res) {
   // 	var email = req.body.email;
@@ -76,9 +77,7 @@ module.exports = function(app) {
   //   //   res.json(dbPost);
   //   // });
   // });
-=======
 
->>>>>>> 344807d1932bd6e2d7aa4b7fb53fd83c5a06dd56
 
   // // DELETE route for deleting posts
   // app.delete("/api/posts/:id", function(req, res) {

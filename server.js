@@ -27,9 +27,9 @@ app.use(passport.initialize());
  
 app.use(passport.session());
 
-var exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// var exphbs = require("express-handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 require("./routes/html-routes.js")(app);
 require("./routes/auth-routes.js")(app);
