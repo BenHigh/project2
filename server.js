@@ -8,7 +8,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 
 var passport = require('passport');
-var session = require('session');
+var session = require('express-session');
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -26,11 +26,12 @@ app.use(passport.initialize());
  
 app.use(passport.session());
 
-//var exphbs = require("express-handlebars");
-//app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-//app.set("view engine", "handlebars");
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 require("./routes/html-routes.js")(app);
+require("./routes/auth-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 // Starts the server to begin listening

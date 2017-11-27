@@ -3,13 +3,19 @@ var express = require("express");
 var router = express.Router();
 
 module.exports = {
-  renderHome: function(req, res) {
+  home: function(req, res) {
     res.render('index');
   },
-  renderCorForm: function(req, res) {
+  about: function(req, res) {
+    res.render('about');
+  },
+  contact: function(req, res) {
+    res.render('contact');
+  },
+  corForm: function(req, res) {
     res.render('corForm');
   },
-  renderCusForm: function(req, res) {
+  cusForm: function(req, res) {
     res.render('cusForm');
   },
   renderCorRes: function(req, res) {

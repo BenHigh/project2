@@ -2,21 +2,15 @@
 // html-routes.js - this file offers a set of routes for sending users to the various html pages
 // *********************************************************************************
 
-var htmlCont = require('../controllers/html');
+var htmlCont = require('../controllers/htmlcont');
 module.exports = function(app) {
-	app.get("/", function(req, res) {
-		res.sendFile(path.join(__dirname, "../public/index.html"));
-	});
+	app.get("/", htmlCont.home);
 
 	// Route to the cms page
-	app.get("/about", function(req, res) {
-		res.sendFile(path.join(__dirname, "../public/about.html"));
-	});
+	app.get("/about", htmlCont.about);
 
 	// blog route loads blog.html
-	app.get("/contact", function(req, res) {
-		res.sendFile(path.join(__dirname, "../public/contact.html"));
-	});
+	app.get("/contact", htmlCont.contact);
   // app.get('/', htmlCont.renderHome);
   // app.get('/corp', htmlCont.renderCorForm);
   // app.get('/client', htmlCont.renderCusForm);
