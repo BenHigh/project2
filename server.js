@@ -21,9 +21,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(session({ secret: 'monsieur miyagi'}));
- 
+
 app.use(passport.initialize());
- 
+
 app.use(passport.session());
 
 var exphbs = require("express-handlebars");
@@ -36,7 +36,7 @@ require("./routes/api-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
 	app.listen(PORT, function() {
 	  console.log("App listening on PORT " + PORT);
 	});

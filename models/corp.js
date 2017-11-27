@@ -1,11 +1,11 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Corp = sequelize.define("Corp", {
-    id: {
-      autoIncrement: true,
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
+    // id: {
+    //   autoIncrement: true,
+    //   primaryKey: true,
+    //   type: DataTypes.INTEGER
+    // },
     corp_name: {
       type: DataTypes.STRING,
       notEmpty: true
@@ -21,7 +21,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     results: {
-      type: DataTypes.STRING
+      type: DataTypes.JSONB,
+      allowNull: false
     },
     last_logon: {
       type: DataTypes.DATE

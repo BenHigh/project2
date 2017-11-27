@@ -1,3 +1,5 @@
+var personalityResults;
+
 var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
 
 var personality_insights = new PersonalityInsightsV3({
@@ -15,4 +17,8 @@ personality_insights.profile({
       console.log('error:', err);
     else
       console.log(JSON.stringify(response, null, 2));
+      results = JSON.stringify(response, null, 2);
+
 });
+
+module.exports = personalityResults;
