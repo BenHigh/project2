@@ -7,7 +7,7 @@ var apiCont = require('../controllers/apicont');
 module.exports = function(app) {
   app.get('/test', apiCont.index);
 
-  // POST route for saving a new post
+  // POST route for saving a new corp
   app.post("/api/corps", function(req, res) {
 
     console.log("Corp Data:");
@@ -20,7 +20,7 @@ module.exports = function(app) {
       corp_name: req.body.corp_name,
       email: req.body.email,
       password: req.body.password,
-      results: personalityResults,
+      results: req.body.results,
       last_logon: req.body.last_logon
     }).then(function(dbPost) {
       res.json(dbPost);
