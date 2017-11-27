@@ -1,17 +1,13 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define('User', {
+  var Corp = sequelize.define("Corp", {
     id: {
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    name: {
+    corp_name: {
       type: DataTypes.STRING,
-      notEmpty: true
-    }, 
-    username: {
-      type: DataTypes.TEXT,
       notEmpty: true
     },
     email: {
@@ -27,13 +23,16 @@ module.exports = function(sequelize, DataTypes) {
     results: {
       type: DataTypes.STRING
     },
-    matches: {
-      type: DataTypes.STRING
-    },
     last_logon: {
       type: DataTypes.DATE
     }
   });
 
-  return User;
+  Corp.associate = function(models) {
+    Corp.hasMany(models.User, {
+      onDelete: "cascade"
+    });
+  };
+
+  return Corp;
 };

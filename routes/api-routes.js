@@ -1,11 +1,12 @@
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
-var apiCont = require('../controllers/api');
+var apiCont = require('../controllers/apicont');
 module.exports = function(app) {
   app.get('/test', apiCont.index);
 
   // POST route for saving a new post
+
   app.post("/contact", function(req, res) {
   	var email = req.body.email;
   	console.log(email);
@@ -13,6 +14,14 @@ module.exports = function(app) {
     //   res.json(dbPost);
     // });
   });
+
+//   app.post("/api/posts", function(req, res) {
+//     db.Post.create(req.body).then(function(dbPost) {
+//       res.json(dbPost);
+//     });
+//   });
+
+
 };
 
 
@@ -58,6 +67,7 @@ module.exports = function(app) {
 //     });
 //   });
 
+<<<<<<< HEAD
   // // POST route for saving a new post
   // app.post("/contact", function(req, res) {
   // 	var email = req.body.email;
@@ -66,6 +76,9 @@ module.exports = function(app) {
   //   //   res.json(dbPost);
   //   // });
   // });
+=======
+
+>>>>>>> 344807d1932bd6e2d7aa4b7fb53fd83c5a06dd56
 
   // // DELETE route for deleting posts
   // app.delete("/api/posts/:id", function(req, res) {
