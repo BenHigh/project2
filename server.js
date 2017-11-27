@@ -6,6 +6,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var app = express();
 
 
 // Sets up the Express App

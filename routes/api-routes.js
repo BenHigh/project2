@@ -4,6 +4,15 @@
 var apiCont = require('../controllers/api');
 module.exports = function(app) {
   app.get('/test', apiCont.index);
+
+  // POST route for saving a new post
+  app.post("/contact", function(req, res) {
+  	var email = req.body.email;
+  	console.log(email);
+    // db.Post.create(req.body).then(function(dbPost) {
+    //   res.json(dbPost);
+    // });
+  });
 };
 
 
@@ -49,23 +58,25 @@ module.exports = function(app) {
 //     });
 //   });
 
-//   // POST route for saving a new post
-//   app.post("/api/posts", function(req, res) {
-//     db.Post.create(req.body).then(function(dbPost) {
-//       res.json(dbPost);
-//     });
-//   });
+  // // POST route for saving a new post
+  // app.post("/contact", function(req, res) {
+  // 	var email = req.body.email;
+  // 	console.log(email);
+  //   // db.Post.create(req.body).then(function(dbPost) {
+  //   //   res.json(dbPost);
+  //   // });
+  // });
 
-//   // DELETE route for deleting posts
-//   app.delete("/api/posts/:id", function(req, res) {
-//     db.Post.destroy({
-//       where: {
-//         id: req.params.id
-//       }
-//     }).then(function(dbPost) {
-//       res.json(dbPost);
-//     });
-//   });
+  // // DELETE route for deleting posts
+  // app.delete("/api/posts/:id", function(req, res) {
+  //   db.Post.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbPost) {
+  //     res.json(dbPost);
+  //   });
+  // });
 
 //   // PUT route for updating posts
 //   app.put("/api/posts", function(req, res) {
