@@ -47,3 +47,25 @@ body {
 #pills li>.active{
 	background: red;
 }
+
+#employeesOrCustomers {
+	/*position: relative;
+	float: left;
+	margin-left: 12px;
+	height: 33px;
+	text-align: center;*/
+}
+
+.checkbox-row {
+	margin-left: 15px;
+}
+
+#otherValue {
+	display: none;
+}
+
+#other:checked ~ #otherValue
+{
+  display: inline-block;
+  margin-left: 6px;
+}
