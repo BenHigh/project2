@@ -14,6 +14,7 @@ module.exports = function(app) {
   // app.get('/', htmlCont.renderHome);
   // app.get('/corp', htmlCont.renderCorForm);
   // app.get('/client', htmlCont.renderCusForm);
+	app.get("/newUser", htmlCont.cusForm);
 };
 
 // // Dependencies
