@@ -7,14 +7,14 @@ var apiCont = require('../controllers/apicont');
 module.exports = function(app) {
   app.get('/test', apiCont.index);
 
-  // POST route for saving a new corp
+  // POST route for saving a new CORP
   app.post("/api/corps", function(req, res) {
 
     console.log("Corp Data:");
     console.log(req.body);
     console.log("------------------");
-    console.log("Personality Data");
-    console.log(personalityResults);
+    // console.log("Personality Data");
+    // console.log(personalityResults);
 
     db.Corp.create({
       corp_name: req.body.corp_name,
@@ -27,7 +27,37 @@ module.exports = function(app) {
     });
   });
 
+  // POST route for saving a new USER
+  app.post("/api/newUser", function(req, res) {
+
+    console.log("User Data:");
+    console.log(req.body);
+    console.log("------------------");
+
+    db.User.create({
+      name: req.body.name,
+      email: req.body.email,
+      username: req.body.username,
+      password: req.body.password,
+      summary: req.body.summary,
+      results: req.body.results,
+      last_logon: req.body.last_logon
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
+
 };
+
+// $.ajax({
+//   type:     "GET",
+//   url:      "https://graph.facebook.com/10150232496792613",
+//   dataType: "jsonp",
+//   success: function(data){
+//     console.log(data);
+//   }
+// });
 
 
 // // Dependencies

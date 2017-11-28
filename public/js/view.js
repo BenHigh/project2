@@ -15,7 +15,7 @@ $("#add-btn").on("click", function(event) {
 
   var email = $("#email").val().trim();
   var comment = $("#comment").val().trim();
-  
+
   var newContact = {
     email: email,
     comment: comment

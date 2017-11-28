@@ -20,6 +20,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    summary: {
+      type: DataTypes.TEXT
+    },
     results: {
       type: DataTypes.JSONB,
       allowNull: false
