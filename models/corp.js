@@ -1,11 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Corp = sequelize.define("Corp", {
-    // id: {
-    //   autoIncrement: true,
-    //   primaryKey: true,
-    //   type: DataTypes.INTEGER
-    // },
     corp_name: {
       type: DataTypes.STRING,
       notEmpty: true
@@ -24,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT
     },
     results: {
-      type: DataTypes.JSONB,
+      type: DataTypes.STRING,
       allowNull: false
     },
     last_logon: {
@@ -32,11 +27,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Corp.associate = function(models) {
-    Corp.hasMany(models.User, {
-      onDelete: "cascade"
-    });
-  };
+  // Corp.associate = function(models) {
+  //   Corp.hasMany(models.User, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   return Corp;
 };

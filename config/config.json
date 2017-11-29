@@ -2,9 +2,9 @@
   "development": {
     "username": "postgres",
     "port": 5432,
-    "password": "Tw166250!",
+    "password": "",
     "database": "matchmade_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
