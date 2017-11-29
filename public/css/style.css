@@ -1,15 +1,7 @@
-
-
-
 body {
 	background: lightgrey;
-<<<<<<< HEAD
-	background: gray;
 	padding : 1%;
 	font-family: Lato, sans-serif;
-=======
-	/*background: #eee;*/
->>>>>>> 63c0fe4dcfa238898fd778d0ca06869fa75ce562
 }
 
 .container .jumbotron {
@@ -58,9 +50,6 @@ body {
 #pills li>.active{
 	background: red;
 }
-
-<<<<<<< HEAD
-=======
 
 /* - - \/ - - - TW edits, change if you want - - - \/ - - */
 
@@ -127,7 +116,6 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-<<<<<<< HEAD
 
 .form-signup {
   max-width: 580px;
@@ -136,6 +124,3 @@ body {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-=======
->>>>>>> 63c0fe4dcfa238898fd778d0ca06869fa75ce562
->>>>>>> bc6377cd67e9d74e9baca3c10c66e10a4ba9583c

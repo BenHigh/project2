@@ -5,11 +5,9 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-<<<<<<< HEAD
-=======
+
 var bodyParser = require("body-parser");
 var app = express();
->>>>>>> bc6377cd67e9d74e9baca3c10c66e10a4ba9583c
 
 var flash = require('connect-flash');
 var passport = require('passport');//,
@@ -44,13 +42,11 @@ app.use(flash());
 // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 // app.set("view engine", "handlebars");
 
-<<<<<<< HEAD
 require('./config/passport/passport.js')(passport, db.User);
-=======
+
 // var exphbs = require("express-handlebars");
 // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 // app.set("view engine", "handlebars");
->>>>>>> bc6377cd67e9d74e9baca3c10c66e10a4ba9583c
 
 require("./routes/html-routes.js")(app);
 require("./routes/auth-routes.js")(app, passport);
