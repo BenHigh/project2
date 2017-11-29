@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT
     },
     results: {
-      type: DataTypes.JSONB,
+      type: DataTypes.STRING,
       allowNull: false
     },
     last_logon: {
