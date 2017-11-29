@@ -2,93 +2,126 @@
 <html lang="en-us">
 	<head>
 		<meta charset="UTF-8">
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>CCMatch</title>
 	</head>
 	<body>
 		<!-- Start of navbar -->
-		<nav class="navbar navbar-default">
-			<div class="container-fluid navbar-custom">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="row">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-						<div class="col-xs-12 phone-nav">
-							<a class="navbar-brand" href="#" id="logo">CCMatch</a>
-						</div>
+	    <nav class="navbar navbar-default">
+	      	<div class="container-fluid navbar-custom">
+	        <!-- Brand and toggle get grouped for better mobile display -->
+	        	<div class="row">
+	          		<div class="navbar-header">
+	            		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+	            		</button>
+			            <div class="col-xs-12 phone-nav">
+			              	<a class="navbar-brand" href="#" id="logo">CCMatch</a>
+			            </div>
+			        </div>
+
+	          <!-- Collect the nav links, forms, and other content for toggling -->
+	          		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+			              <li><a href="index.html">Home</a></li>
+			              <li><a href="about.html">About</a></li>
+			              <li><a href="contact.html">Contact</a></li>
+			            </ul>
+	          		</div><!-- /.navbar-collapse -->
+	        	</div>
+	      	</div><!-- /.container-fluid -->
+	    </nav>
+		<section>
+			<div class="container">
+		        <div class="jumbotron text-center">
+		            <h1><span class="fa fa-lock"></span>Welcome to CCMatch!</h1>
+
+		            <p>Please select your portal:</p>
+
+		            <a href="signin.html" class="btn btn-default">
+		                <span class="fa fa-user"></span> Client Portal
+		            </a>
+		            <a href="signin.html" class="btn btn-default">
+		                <span class="fa fa-user"></span> Corporate Portal
+		            </a>
+		        </div>
+   			</div>
+		</section>
+		<div id="socMedCont">
+			<div class="container" ><h2>Login with Social Media</h2></div>
+			<div id="loginTab" class="container">	
+				<ul class="nav nav-pills" id="pills">
+					<li class="active icon text-center">
+						<a href="#localTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/local.png"></a>
+					</li>
+
+					<li class="icon text-center">
+						<a href="#twitTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/twitter.png"></a>
+					</li>
+				
+					<li class="icon text-center">
+						<a href="#fbTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/facebook.png"></a>
+					</li>
+				
+					<li class="icon text-center">
+						<a href="#liTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/linkedin.png"></a>
+					</li>
+				</ul>
+
+				<div class="tab-content clearfix">
+					<div class="tab-pane active" id="localTab">
+				  		<form class="form-signin" method="POST" action="/auth/login">       
+					      	<h2 class="form-signin-heading">Please login</h2>
+
+					      	<input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+
+					      	<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+
+					      	<label class="checkbox">
+					        <input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+
+					    	<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+
+					    	<br>
+					    	<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
+					    	<p>Forgot your password?  <a href="/contact">Click Here!</a></p>   
+					    </form>
 					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right navbar-right-custom">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li><a href="corLogin.html">Login</a></li>
-							<li><a href="results.html">Results</a></li>
-							<li><a href="signupUser.html">Create a Profile (User)</a></li>
-						</ul>
-						</div><!-- /.navbar-collapse -->
+				  	<div class="tab-pane" id="twitTab">
+				  		<form id="signin" name="signin" method="post" action="/auth/login">
+					        <label for="email">Email Address</label>
+					        <input class="text" name="email" type="text" />
+					        <label for="password">Password</label>
+					        <input name="password" type="password" />
+					        <input class="btn" type="submit" value="Sign In" />
+					    </form>
+			          	
 					</div>
-					</div><!-- /.container-fluid -->
-				</nav>
-				
-				
-				
-				
-				<section>
-					<div class="container">
-						<div class="jumbotron text-center">
-							<h1>
-							<span class="fa fa-lock"></span>Welcome to CCMatch!</h1>
-							<p>Please select your portal:</p>
-							<a href="/corp" class="btn btn-default">
-								<span class="fa fa-user"></span> Corporate Portal</a>
-								<a href="/client" class="btn btn-default">
-									<span class="fa fa-user"></span> Client Portal</a>
-								</div>
-							</div>
-						</section>
-					</body>
-				</html>
-				<div id="socMedCont">
-					<div class="container" ><h2>Login with Social Media</h2></div>
-					<div id="loginTab" class="container">
-						<ul  class="nav nav-pills" id="pills">
-							<li class="active icon text-center">
-								<a href="#twitTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/twitter.png"></a>
-							</li>
-							
-							<li class="icon text-center">
-								<a href="#fbTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/facebook.png"></a>
-							</li>
-							
-							<li class="icon text-center">
-								<a href="#liTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/linkedin.png"></a>
-							</li>
-						</ul>
-						<div class="tab-content clearfix">
-							<div class="tab-pane active" id="twitTab">
-								<h3>Same as example 1 but we have now styled the tab's corner</h3>
-							</div>
-							<div class="tab-pane" id="fbTab">
-								<h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
-							</div>
-							<div class="tab-pane" id="liTab">
-								<h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-							</div>
-						</div>
+					<div class="tab-pane" id="fbTab">
+			          	<form id="signup" name="signup" method="post" action="/auth/signup">
+					        <label for="email">Email Address</label>
+					        <input class="text" name="email" type="email" />
+					        <label for="firstname">Firstname</label>
+					        <input name="firstname" type="text" />
+					        <label for="lastname">Lastname</label>
+					        <input name="lastname" type="text" />
+					        <label for="password">Password</label>
+					        <input name="password" type="password" />
+					        <input class="btn" type="submit" value="Sign Up" />
+					    </form>
+					</div>
+			        <div class="tab-pane" id="liTab">
+			          	<h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
 					</div>
 				</div>
-			</body>
-			<script src="js/index.js"></script>
-		</html>
+		 	</div>
+		 </div>
+	</body>
+	<script src="js/index.js"></script>
+</html>

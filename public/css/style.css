@@ -1,8 +1,10 @@
 body {
+<<<<<<< HEAD
 background: lightgrey;
 padding : 1%;
 font-family: Lato, sans-serif;
 }
+
 .container .jumbotron {
 border-radius: 10px;
 border: 2px solid black;
@@ -19,7 +21,10 @@ padding: 0;
 max-width: 100%;
 }
 .icon {
-width: 33.3%;
+	width: 25%;
+	max-height: 150px;
+	height: 150px;
+
 }
 .tab-content {
 margin: 25px;
@@ -37,9 +42,11 @@ border: 2px solid black;
 border: 2px solid purple;
 margin: 0;
 }
+
 #pills li>.active{
 background: red;
 }
+
 /* - - \/ - - - TW edits, change if you want - - - \/ - - */
 #employeesOrCustomers {
 /*position: relative;
@@ -99,3 +106,12 @@ margin-bottom: 20px;
 border-top-left-radius: 0;
 border-top-right-radius: 0;
 }
+
+.form-signup {
+  max-width: 580px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
