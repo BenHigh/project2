@@ -6,9 +6,11 @@ var natural_language_understanding = new NaturalLanguageUnderstandingV1({
 });
 
 var parameters = {
-  'url': 'www.ibm.com',
+  'url': ['www.ibm.com' , 'www.google.com'],
   'features': {
-    'categories': {}
+    'keywords': {},
+    'emotion': {},
+    'sentiment': {}
   }
 };
 
