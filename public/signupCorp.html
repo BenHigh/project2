@@ -1,265 +1,236 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<title>Create Your CCMatch Company Profile</title>
-</head>
-
-<body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid navbar-custom">
-
-			<!-- Brand and toggle get grouped for better mobile display -->
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Create Your CCMatch Company Profile</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<div class="col-xs-12 phone-nav">
+							<a class="navbar-brand" href="index.html" id="logo">CCMatch</a></div>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right navbar-right-custom">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="corLogin.html">Login</a></li>
+								<li><a href="results.html">Results</a></li>
+								<li><a href="signupUser.html">Create a Profile (User)</a></li>
+							</ul>
+						</div>
+						<!-- /.navbar-collapse -->
+					</div>
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
 			<div class="row">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-					<div class="col-xs-12 phone-nav">
-						<a class="navbar-brand" href="index.html" id="logo">CCMatch</a></div>
-				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right navbar-right-custom">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-	<div class="row">
-
-		<div class="col-lg-12">
-
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title"><strong>Create Your Company Profile to be Matched with Potential Employees and Customers</strong></h3>
-				</div>
-				<div class="panel-body">
-					<form action="" method="POST" role="form">
-
-						<div class="form-group">
-							<label for="name">Company Name:</label>
-							<input type="text" class="form-control" id="name" placeholder="e.g. Wood's Construction Co.">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>Create Your Company Profile to be Matched with Potential Employees and Customers</strong></h3>
 						</div>
-
-						<div class="form-group">
-							<label for="email">Email:</label>
-							<input type="text" class="form-control" id="email" placeholder="e.g. woodsOK@outlook.com">
-						</div>
-
-						<div class="form-group">
-							<label for="employeesOrCustomers">Are you looking for employees or customers?</label>
-							<select id="employeesOrCustomers" class="form-control">
-                <option value="employees">Employees</option>
-                <option value="customers">Customers</option>
-                <option value="employees customers">Both</option>
-              </select>
-						</div>
-
-						<div class="form-group">
-							<label for="">Password:</label>
-							<input type="text" class="form-control" id="password" placeholder="6 to 20 characters">
-						</div>
-
-						<!-- <div class="form-check">
-                <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input">
-                  Check me out
-                </label>
-              </div> -->
-
-						<div class="form-group">
-							<label for="">Professional Summary:</label>
-							<textarea class="form-control" rows="5" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
-							<!-- <input type="text" class="form-control" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."> -->
-						</div>
-
-						<div class="form-group">
-							<label for="" class="control-label">Your Industry (Or Industries):</label>
-
-
-							<!-- FIRST COLUMN -->
-							<div class="row checkbox-row">
-								<div class="col-sm-3">
-
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Accounting
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Architecture/Planning
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Automotive
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Banking
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Construction
-                   </label>
-									</div>
-
+						<div class="panel-body">
+							<form action="" method="POST" role="form">
+								<div class="form-group">
+									<label for="name">Company Name:</label>
+									<input type="text" class="form-control" id="name" placeholder="e.g. Wood's Construction Co.">
 								</div>
-
-								<!-- SECOND COLUMN -->
-								<div class="col-sm-3">
-
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Design
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Education
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Engineering
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Government
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Graphic Design
-                   </label>
-									</div>
-
+								<div class="form-group">
+									<label for="email">Email:</label>
+									<input type="text" class="form-control" id="email" placeholder="e.g. woodsOK@outlook.com">
 								</div>
-
-								<!-- THIRD COLUMN -->
-
-								<div class="col-sm-3">
-
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Hospitality
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Information Technology
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Law
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Marketing
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Medical
-                   </label>
-									</div>
-
+								<div class="form-group">
+									<label for="employeesOrCustomers">Are you looking for employees or customers?</label>
+									<select id="employeesOrCustomers" class="form-control">
+										<option value="employees">Employees</option>
+										<option value="customers">Customers</option>
+										<option value="employees customers">Both</option>
+									</select>
 								</div>
-
-								<!-- FOURTH COLUMN -->
-
-								<div class="col-sm-3">
-
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Music
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Oil & Energy
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Real Estate
-                   </label>
-									</div>
-									<div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Technology
-                   </label>
-									</div>
-									<!-- <div class="checkbox">
-										<input id="" class="styled" type="checkbox">
-										<label for="">
-                       Other
-                   </label>
-								 </div> -->
-									<div class="checkbox">
-										<input type="checkbox" id="other" class="styled" value="other">
-										<label for="other">
-											Other
-										</label>
-										<input type="text" id="otherValue">
-									</div>
-
+								<div class="form-group">
+									<label for="">Password:</label>
+									<input type="text" class="form-control" id="password" placeholder="6 to 20 characters">
 								</div>
-
+								<!-- <div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input">
+										Check me out
+									</label>
+								</div> -->
+								<div class="form-group">
+									<label for="">Professional Summary:</label>
+									<textarea class="form-control" rows="5" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
+									<!-- <input type="text" class="form-control" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."> -->
+								</div>
+								<div class="form-group">
+									<label for="" class="control-label">Your Industry (Or Industries):</label>
+									<!-- FIRST COLUMN -->
+									<div class="row checkbox-row">
+										<div class="col-sm-3">
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Accounting
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Architecture/Planning
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Automotive
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Banking
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Construction
+												</label>
+											</div>
+										</div>
+										<!-- SECOND COLUMN -->
+										<div class="col-sm-3">
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Design
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Education
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Engineering
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Government
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Graphic Design
+												</label>
+											</div>
+										</div>
+										<!-- THIRD COLUMN -->
+										<div class="col-sm-3">
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Hospitality
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Information Technology
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Law
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Marketing
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Medical
+												</label>
+											</div>
+										</div>
+										<!-- FOURTH COLUMN -->
+										<div class="col-sm-3">
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Music
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Oil & Energy
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Real Estate
+												</label>
+											</div>
+											<div class="checkbox">
+												<input id="" class="styled" type="checkbox">
+												<label for="">
+													Technology
+												</label>
+											</div>
+											<!-- <div class="checkbox">
+													<input id="" class="styled" type="checkbox">
+													<label for="">
+													Other
+												</label>
+											</div> -->
+											<div class="checkbox">
+												<input type="checkbox" id="other" class="styled" value="other">
+												<label for="other">
+													Other
+												</label>
+												<input type="text" id="otherValue">
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<br>
+							<div class="text-right">
+								<button type="submit" class="btn btn-primary btn-md" id="add-btn">Submit</button>
 							</div>
 						</div>
-
-					</form>
-					<br>
-					<div class="text-right">
-						<button type="submit" class="btn btn-primary btn-md" id="add-btn">Submit</button>
 					</div>
 				</div>
 			</div>
-
-		</div>
-	</div>
-	<script src="js/index.js"></script>
-</body>
-
-</html>
+			<script src="js/index.js"></script>
+		</body>
+	</html>
