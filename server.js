@@ -27,7 +27,7 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(session({ secret: 'monsieur miyagi'}));
@@ -43,7 +43,7 @@ require('./config/passport/passport.js')(passport, db.User);
 
 require("./routes/html-routes.js")(app);
 require("./routes/auth-routes.js")(app, passport);
-require("./routes/api-routes.js")(app);
+//require("./routes/api-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================

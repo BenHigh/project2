@@ -12,7 +12,9 @@ module.exports = function(app) {
 	// blog route loads blog.html
 	app.get("/contact", htmlCont.contact);
 
-	app.get('/signup', htmlCont.signup);
+	app.get('/usignup', htmlCont.usignup);
+
+	app.get('/csignup', htmlCont.csignup);
   // app.get('/', htmlCont.renderHome);
   // app.get('/corp', htmlCont.renderCorForm);
   // app.get('/client', htmlCont.renderCusForm);

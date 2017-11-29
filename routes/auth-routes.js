@@ -20,6 +20,7 @@ module.exports = function(app, passport) {
     app.get('/auth/logout', authCont.logout);
 
     function isLoggedIn(req, res, next) {
+    	console.log('here 23 authroutes');
 	    if (req.isAuthenticated()){
 	        return next();
 	    }

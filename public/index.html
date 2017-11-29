@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>CCMatch</title>
 	</head>
 	<body>
@@ -32,6 +32,7 @@
 			              <li><a href="index.html">Home</a></li>
 			              <li><a href="about.html">About</a></li>
 			              <li><a href="contact.html">Contact</a></li>
+			              <li><a href="signupUser.html">Create a Profile (User)</a></li>
 			            </ul>
 	          		</div><!-- /.navbar-collapse -->
 	        	</div>
@@ -44,11 +45,11 @@
 
 		            <p>Please select your portal:</p>
 
-		            <a href="/corp" class="btn btn-default">
-		                <span class="fa fa-user"></span> Corporate Portal
-		            </a>
-		            <a href="/client" class="btn btn-default">
+		            <a href="signin.html" class="btn btn-default">
 		                <span class="fa fa-user"></span> Client Portal
+		            </a>
+		            <a href="signin.html" class="btn btn-default">
+		                <span class="fa fa-user"></span> Corporate Portal
 		            </a>
 		        </div>
    			</div>
@@ -56,8 +57,12 @@
 		<div id="socMedCont">
 			<div class="container" ><h2>Login with Social Media</h2></div>
 			<div id="loginTab" class="container">	
-				<ul  class="nav nav-pills" id="pills">
+				<ul class="nav nav-pills" id="pills">
 					<li class="active icon text-center">
+						<a href="#localTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/local.png"></a>
+					</li>
+
+					<li class="icon text-center">
 						<a href="#twitTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/twitter.png"></a>
 					</li>
 				
@@ -71,7 +76,25 @@
 				</ul>
 
 				<div class="tab-content clearfix">
-				  	<div class="tab-pane active" id="twitTab">
+					<div class="tab-pane active" id="localTab">
+				  		<form class="form-signin" method="POST" action="/auth/login">       
+					      	<h2 class="form-signin-heading">Please login</h2>
+
+					      	<input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+
+					      	<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+
+					      	<label class="checkbox">
+					        <input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+
+					    	<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+
+					    	<br>
+					    	<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
+					    	<p>Forgot your password?  <a href="/contact">Click Here!</a></p>   
+					    </form>
+					</div>
+				  	<div class="tab-pane" id="twitTab">
 				  		<form id="signin" name="signin" method="post" action="/auth/login">
 					        <label for="email">Email Address</label>
 					        <input class="text" name="email" type="text" />

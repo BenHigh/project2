@@ -1,5 +1,3 @@
-var bcrypt = require('bcrypt-nodejs');
-
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
     // id: {
@@ -10,19 +8,27 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING,
       notEmpty: true
-    }, 
-    username: {
-      type: DataTypes.TEXT
     },
-    email: {
+    username: {
       type: DataTypes.STRING,
       validate: {
         isEmail: true
       }
     },
+    // email: {
+    //   type: DataTypes.STRING,
+    //   validate: {
+    //     isEmail: true
+    //   }
+    // },
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    summary: {
+      type: DataTypes.TEXT,
+      // notEmpty: true,
+      default: "BASIC INFO CUNT"
     },
     results: {
       type: DataTypes.STRING
@@ -32,11 +38,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
  
-
-  // checking if password is valid
-  function validPassword(password) {
-      return bcrypt.compareSync(password, this.local.password);
-  };
-
   return User;
 };

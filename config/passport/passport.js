@@ -9,11 +9,13 @@ module.exports = function(passport, user) {
 
     // used to serialize the user for the session
     passport.serializeUser(function(user, done) {
+    	console.log('here!!!1');
         done(null, user.id);
     });
 
     // used to deserialize the user
     passport.deserializeUser(function(id, done) {
+    	console.log('here??');
         User.findById(id).then(function(user) {
         	if(user){
         		done(null, user.get());
@@ -25,21 +27,18 @@ module.exports = function(passport, user) {
  
     passport.use('local-signup', new LocalStrategy(
         {
-            usernameField: 'email',
+            usernameField: 'username',
             passwordField: 'password',
             passReqToCallback: true // allows us to pass back the entire request to the callback
         },
  
-        function(req, email, password, done) {
+        function(req, username, password, done) {
+        	console.log('here 34 passport');
             var generateHash = function(password) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
             };
  
-            User.findOne({
-                where: {
-                    email: email
-                }
-            }).then(function(user) {
+            User.findOne({where:{username: username}}).then(function(user) {
                 if (user)
                 {
                     return done(null, false, {
@@ -49,8 +48,7 @@ module.exports = function(passport, user) {
                     var userPassword = generateHash(password);
                     var data =
                         {
-                            username: email,
-                            email: email,
+                            username: username,
                             password: userPassword,
                             name: req.body.firstname + " " + req.body.lastname
                         };
@@ -71,17 +69,17 @@ module.exports = function(passport, user) {
 
     passport.use('local-login', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
-        usernameField: 'email',
+        usernameField: 'username',
         passwordField: 'password',
         passReqToCallback: true // allows us to pass back the entire request to the callback
     },
-        function (req, email, password, done) { // callback with email and password from our form
+        function (req, username, password, done) { // callback with email and password from our form
         	var isValidPassword = function(userpass,password){
 		    	return bCrypt.compareSync(password, userpass);
 		    }
             // find a user whose email is the same as the forms email
             // we are checking to see if the user trying to login already exists
-            User.findOne({ email: email }).then(function (user) {
+            User.findOne({where:{username: username}}).then(function (user) {
             	console.log("here 85 passportjs");
 
                 if (!user) {

@@ -10,8 +10,11 @@ module.exports = {
   contact: function(req, res) {
     res.sendFile(path.join(__dirname, '../public/contact.html'));
   },
-  signup: function(req,res) {
-      res.sendFile(path.join(__dirname, '../public/signup.html'));
+  usignup: function(req,res) {
+      res.sendFile(path.join(__dirname, '../public/signupUser.html'));
+  },
+  csignup: function(req,res) {
+      res.sendFile(path.join(__dirname, '../public/signupCorp.html'));
   }
   // ,
   // corForm: function(req, res) {
