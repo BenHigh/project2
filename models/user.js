@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     summary: {
       type: DataTypes.TEXT,
-      // notEmpty: true,
+      notEmpty: true,
       default: "BASIC INFO CUNT"
     },
     results: {

@@ -9,13 +9,11 @@ module.exports = function(passport, user) {
 
     // used to serialize the user for the session
     passport.serializeUser(function(user, done) {
-    	console.log('here!!!1');
         done(null, user.id);
     });
 
     // used to deserialize the user
     passport.deserializeUser(function(id, done) {
-    	console.log('here??');
         User.findById(id).then(function(user) {
         	if(user){
         		done(null, user.get());
@@ -80,7 +78,6 @@ module.exports = function(passport, user) {
             // find a user whose email is the same as the forms email
             // we are checking to see if the user trying to login already exists
             User.findOne({where:{username: username}}).then(function (user) {
-            	console.log("here 85 passportjs");
 
                 if (!user) {
 			        return done(null, false, { message: 'Email does not exist' });
