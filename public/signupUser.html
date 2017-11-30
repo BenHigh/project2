@@ -46,44 +46,34 @@
             <h3 class="panel-title"><strong>Create Your Profile to be Matched with Potential Employers</strong></h3>
           </div>
           <div class="panel-body">
-            <form action="" method="POST" role="form">
-            
-              <div class="form-group">
-                <label for="">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="e.g. John Smith">
-              </div>
+            <form class="form-signup" method="POST" action="/auth/signup">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" placeholder="e.g. John Smith">
 
-              <div class="form-group">
-                <label for="">Email:</label>
-                <input type="text" class="form-control" id="email" placeholder="e.g. johnsmith@yahoo.com">
-              </div>
+                <br>
 
-              <div class="form-group">
-                <label for="">Username:</label>
-                <input type="text" class="form-control" id="username" placeholder="e.g. JohnSmith13">
-              </div>
+                <label for="username">Email:</label>
+                <input type="text" class="form-control" name="username" placeholder="e.g. johnsmith@yahoo.com">
 
-              <div class="form-group">
-                <label for="">Password:</label>
-                <input type="text" class="form-control" id="password" placeholder="6 to 20 characters">
-              </div>
+                <br>
+              
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" placeholder="6 to 20 characters">
 
-              <div class="form-group">
-                <label for="">Professional Summary:</label>
-                <textarea class="form-control" rows="5" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
-                <!-- <input type="text" class="form-control" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."> -->
-              </div>
+                <br>
+              
+                <label for="summary">Professional Summary:</label>
+                <textarea class="form-control" rows="5" name="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
 
+                <br>
+    
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign Up" />
             </form>
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="createUser-btn">Submit</button>
-            </div>
           </div>
         </div>
 
       </div>      
     </div>
-    <script src="js/index.js"></script>
+
 	</body>
 </html>

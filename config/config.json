@@ -4,7 +4,7 @@
     "port": 5432,
     "password": "letmein",
     "database": "matchmade_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
