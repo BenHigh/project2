@@ -178,3 +178,23 @@ border-top-right-radius: 0;
     padding:5px 10px;
 }
 
+@media screen and (max-width: 640px) {
+  body {
+    background-color: #333;
+  }
+
+  .main-container {
+    /* Box-model */
+    width: 100%;
+    padding: 20px;
+  }
+
+  /*#main-content,
+  #sidebar {
+    width: 100%;
+  }
+
+  #sidebar {
+    margin-top: 40px;
+  }*/
+}
