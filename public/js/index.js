@@ -24,7 +24,6 @@ $("#createUser-btn").on("click", function(event) {
 
       alert("Profile created successfully");
 
-
       $("#name").val("");
       $("#email").val("");
       $("#username").val("");
