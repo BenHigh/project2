@@ -1,6 +1,5 @@
 {
   "development": {
-
     "username": "root",
     "port": 3306,
     "password": null,

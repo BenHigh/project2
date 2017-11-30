@@ -164,4 +164,17 @@ border-top-right-radius: 0;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+/*FERNANDO ICONS*/
+
+.sticky button {
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    background:none;
+}
+
+.sticky button i{
+    font-size: 40px;
+    padding:5px 10px;
+}
 

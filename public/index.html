@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://use.fontawesome.com/92c41c2648.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>CCMatch</title>
@@ -46,42 +47,81 @@
 					</div>
 				</section>
 				
-					<!-- icons -->
+				<!-- icons -->
 				<div class="container">
-					<!-- <div id="loginTab" class="modal fade" role="dialog"> -->
-						<div class="sticky-container">
-							<ul class="sticky">
-								<li>
-									<a href="#twitTab"><img class="img-fluid clearfix twitter" src="img/twitter.png" data-dismiss="modal" data-toggle="modal" data-target="#twitter"></a>
-								</li>
-								<li>
-									<a href="#fbTab"><img class="img-fluid clearfix facebook" src="img/facebook.png" data-dismiss="modal" data-toggle="modal" data-target="#facebook"></a>
-								</li>
-								<li>
-									<a href="#liTab"><img class="img-fluid clearfix linkedin" src="img/linkedin.png" data-dismiss="modal" data-toggle="modal" data-target="#linkedin"></a>
-								</li>
-							</ul>
-						</div>
-					<!-- </div> -->
+					
+					<div class="sticky-container">
+						<ul class="sticky">
+							<li>
+								<a href="#twitTab"> <button type="button" data-toggle="modal" data-target="#twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> </button> </a>
+								<!-- 	<a href="#twitTab"><img class="img-fluid clearfix twitter" src="img/twitter.png" data-dismiss="modal" data-toggle="modal" data-target="#twitter"></a> -->
+							</li>
+							<li>
+								<a href="#fbTab"> <button type="button" data-toggle="modal" data-target="#facebook"> <i class="fa fa-facebook-official" aria-hidden="true"></i> </button> </a>
+								<!-- <a href="#fbTab"><img class="img-fluid clearfix facebook" src="img/facebook.png" data-dismiss="modal" data-toggle="modal" data-target="#facebook"></a> -->
+							</li>
+							<li>
+								<a href="#liTab"> <button type="button" data-toggle="modal" data-target="#linkedin"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> </button> </a>
+								<!-- <a href="#liTab"><img class="img-fluid clearfix linkedin" src="img/linkedin.png" data-dismiss="modal" data-toggle="modal" data-target="#linkedin"></a> -->
+							</li>
+						</ul>
+					</div>
+					
 				</div>
-					<!-- login index -->
+				<!-- login index -->
+				<div class="container">
+					<!-- Trigger the modal with a button -->
+					<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
+					<!-- Modal -->
+					<div class="modal fade" id="loginIndex" role="dialog">
+						<div class="modal-dialog">
+							
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
+									<!-- <h4 class="modal-title">Modal Header</h4> -->
+								</div>
+								<div class="modal-body">
+									<form class="form-signin" method="POST" action="/auth/login">
+										<h2 class="form-signin-heading">Customer Login</h2>
+										<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
+										<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+										<label class="checkbox">
+											<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+											<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+											<br>
+											<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
+											<p>Forgot your password?  <a href="/contact">Click Here!</a></p>
+										</form>
+									</div>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#twitter">Twitter</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#facebook">FaceBook</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#linkedin">LinkedIn</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<!-- login Corporate -->
 					<div class="container">
 						<!-- Trigger the modal with a button -->
 						<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
 						<!-- Modal -->
-						<div class="modal fade" id="loginIndex" role="dialog">
+						<div class="modal fade" id="corpLogin" role="dialog">
 							<div class="modal-dialog">
 								
 								<!-- Modal content-->
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
-										<!-- <h4 class="modal-title">Modal Header</h4> -->
+										<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
+										<h4 class="modal-title">Modal Header</h4>
 									</div>
 									<div class="modal-body">
 										<form class="form-signin" method="POST" action="/auth/login">
-											<h2 class="form-signin-heading">Customer Login</h2>
+											<h2 class="form-signin-heading">Corporate Login</h2>
 											<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
 											<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
 											<label class="checkbox">
@@ -92,41 +132,41 @@
 												<p>Forgot your password?  <a href="/contact">Click Here!</a></p>
 											</form>
 										</div>
-										<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#twitter">Twitter</button>
-										<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#facebook">FaceBook</button>
-										<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#linkedin">LinkedIn</button>
+										<div class="modal-footer">
+											
+										</div>
 									</div>
 									
 								</div>
 							</div>
 						</div>
-						<!-- login Corporate -->
+						<!-- login twitter  -->
 						<div class="container">
 							<!-- Trigger the modal with a button -->
 							<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
 							<!-- Modal -->
-							<div class="modal fade" id="corpLogin" role="dialog">
+							<div class="modal fade" id="twitter" role="dialog">
 								<div class="modal-dialog">
 									
 									<!-- Modal content-->
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
 											<h4 class="modal-title">Modal Header</h4>
 										</div>
 										<div class="modal-body">
 											<form class="form-signin" method="POST" action="/auth/login">
-												<h2 class="form-signin-heading">Corporate Login</h2>
+												<h2 class="form-signin-heading">Twitter</h2>
 												<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
 												<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
 												<label class="checkbox">
 													<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
 													<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
-													<br>
+													<!-- <br>
 													<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
-													<p>Forgot your password?  <a href="/contact">Click Here!</a></p>
+													<p>Forgot your password?  <a href="/contact">Click Here!</a></p> -->
 												</form>
+												
 											</div>
 											<div class="modal-footer">
 												
@@ -136,12 +176,12 @@
 									</div>
 								</div>
 							</div>
-							<!-- login twitter  -->
+							<!-- login facebook -->
 							<div class="container">
 								<!-- Trigger the modal with a button -->
 								<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
 								<!-- Modal -->
-								<div class="modal fade" id="twitter" role="dialog">
+								<div class="modal fade" id="facebook" role="dialog">
 									<div class="modal-dialog">
 										
 										<!-- Modal content-->
@@ -152,7 +192,7 @@
 											</div>
 											<div class="modal-body">
 												<form class="form-signin" method="POST" action="/auth/login">
-													<h2 class="form-signin-heading">Twitter</h2>
+													<h2 class="form-signin-heading">FaceBook</h2>
 													<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
 													<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
 													<label class="checkbox">
@@ -172,12 +212,12 @@
 										</div>
 									</div>
 								</div>
-								<!-- login facebook -->
+								<!-- login linkedin -->
 								<div class="container">
 									<!-- Trigger the modal with a button -->
 									<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
 									<!-- Modal -->
-									<div class="modal fade" id="facebook" role="dialog">
+									<div class="modal fade" id="linkedin" role="dialog">
 										<div class="modal-dialog">
 											
 											<!-- Modal content-->
@@ -188,7 +228,7 @@
 												</div>
 												<div class="modal-body">
 													<form class="form-signin" method="POST" action="/auth/login">
-														<h2 class="form-signin-heading">FaceBook</h2>
+														<h2 class="form-signin-heading">Linkedin</h2>
 														<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
 														<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
 														<label class="checkbox">
@@ -200,50 +240,14 @@
 														</form>
 														
 													</div>
-													<div class="modal-footer">
-														
-													</div>
+													<div class="modal-footer"></div>
+													
+													
 												</div>
 												
 											</div>
 										</div>
 									</div>
-									<!-- login linkedin -->
-									<div class="container">
-										<!-- Trigger the modal with a button -->
-										<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
-										<!-- Modal -->
-										<div class="modal fade" id="linkedin" role="dialog">
-											<div class="modal-dialog">
-												
-												<!-- Modal content-->
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal">&times;</button>
-														<h4 class="modal-title">Modal Header</h4>
-													</div>
-													<div class="modal-body">
-														<form class="form-signin" method="POST" action="/auth/login">
-															<h2 class="form-signin-heading">Linkedin</h2>
-															<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
-															<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-															<label class="checkbox">
-																<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
-																<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
-																<!-- <br>
-																<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
-																<p>Forgot your password?  <a href="/contact">Click Here!</a></p> -->
-															</form>
-															
-														</div>
-														<div class="modal-footer">
-															
-														</div>
-													</div>
-													
-												</div>
-											</div>
-										</div>
 									</div>
 								</body>
 								<script src="js/index.js"></script>
