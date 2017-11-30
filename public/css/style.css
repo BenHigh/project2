@@ -1,5 +1,4 @@
 body {
-<<<<<<< HEAD
 background: lightgrey;
 padding : 1%;
 font-family: Lato, sans-serif;
@@ -19,6 +18,57 @@ background: grey;
 #loginTab {
 padding: 0;
 max-width: 100%;
+}
+.img-fluid {
+    width: 50%;
+    height: 50%;
+    float: left;
+    
+}
+
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-50px;
+    top:230px;
+    width:180px;
+    z-index: 1100;
+}
+.sticky li{
+    list-style-type:none;
+    /* background-color:#fff;
+    color:#efefef ; */
+    max-height:    100%;
+    width: auto;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky li:hover{
+    margin-left:-30px;
+}
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+.sticky li p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:11px;
+}
+.sticky li p a{
+    text-decoration:none;
+    color:#2C3539 ;
+}
+.sticky li p a:hover{
+    text-decoration:underline;
 }
 .icon {
 	width: 25%;
