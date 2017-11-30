@@ -7,6 +7,9 @@ $("#createUser-btn").on("click", function(event) {
   var password = $("#password").val().trim();
   var summary = $("#summary").val().trim();
 
+ var moreThan100 = (summary.split(" ").length > 99);
+ if(moreThan100) {
+
   var newUser = {
     name: name,
     email: email,
@@ -28,4 +31,10 @@ $("#createUser-btn").on("click", function(event) {
       $("#summary").val("");
     });
 
+
+}
+else
+{
+alert("Summary not long enough. Please enter more words.");
+}
 });
