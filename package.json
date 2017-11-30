@@ -19,6 +19,7 @@
   "homepage": "https://github.com/BenHigh/project2#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "cheerio": "^1.0.0-rc.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
@@ -35,6 +36,7 @@
     "pg": "^7.4.0",
     "pg-hstore": "^2.3.2",
     "psql": "0.0.1",
+    "request": "^2.83.0",
     "sequelize": "^4.22.7",
     "watson-developer-cloud": "^2.42.0"
   }
