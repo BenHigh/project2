@@ -1,32 +1,41 @@
-// $("#createUser-btn").on("click", function(event) {
-//   event.preventDefault();
+$("#createUser-btn").on("click", function(event) {
+  event.preventDefault();
 
-//   var name = $("#name").val().trim();
-//   var email = $("#email").val().trim();
-//   var username = $("#username").val().trim();
-//   var password = $("#password").val().trim();
-//   var summary = $("#summary").val().trim();
+  var name = $("#name").val().trim();
+  var email = $("#email").val().trim();
+  var username = $("#username").val().trim();
+  var password = $("#password").val().trim();
+  var summary = $("#summary").val().trim();
 
-//   var newUser = {
-//     name: name,
-//     email: email,
-//     username: username,
-//     password: password,
-//     summary: summary
-//   };
+ var moreThan100 = (summary.split(" ").length > 99);
+ if(moreThan100) {
 
-//   $.post("/api/newUser", newUser)
+  var newUser = {
+    name: name,
+    email: email,
+    username: username,
+    password: password,
+    summary: summary
+  };
 
-//     .done(function() {
+  $.post("/api/newUser", newUser)
 
-//       alert("Profile created successfully");
+    .done(function() {
 
-//       $("#name").val("");
-//       $("#email").val("");
-//       $("#username").val("");
-//       $("#password").val("");
-//       $("#summary").val("");
-//     });
+      alert("Profile created successfully");
 
-// });
 
+      $("#name").val("");
+      $("#email").val("");
+      $("#username").val("");
+      $("#password").val("");
+      $("#summary").val("");
+    });
+
+
+}
+else
+{
+alert("Summary not long enough. Please enter more words.");
+}
+});
