@@ -1,3 +1,6 @@
+* {
+	border-radius: 5px;
+}
 body {
 background-image: url("https://goo.gl/vFy4u8");
 background-repeat: no-repeat;
@@ -7,6 +10,10 @@ font-family: Lato, sans-serif;
 }
 
 /* - - \/ - - - TW edits, change if you want - - - \/ - - */
+
+.main-container .navbar.navbar-default{
+    background: rgba(255, 255, 255, 0.8);
+}
 
 .checkbox-row {
 margin-left: 15px;
@@ -61,4 +68,63 @@ border-top-right-radius: 0;
 .form-signup { 
   padding: 1%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+h3 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.shake, .inno, .newB {
+	min-width: 40%;
+	max-height: 300px;
+	margin: 0 auto;
+}
+
+.words {
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  filter: alpha(opacity=60);
+  right: 100px;
+  margin: 0 auto;
+}
+.pls{
+	margin: 10px;
+}
+.work {
+	padding: 10px;
+	margin: 0 auto;
+}
+.aboutUs {
+	padding-top: 50px;
+}
+.img-fluid {
+	 border-radius: 70%;
+	 height: 500px;
+	max-width: 90%;
+	 padding: 10px;
+}
+
+.roundImg {
+	bottom: 0px;
+	left: 50%;
+	padding-top: 350px;
+}
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    font-size: 40px;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.footer {
+   background-color: black;
+   color: white;
+   position: relative;
+   bottom: 0;
 }
