@@ -6,76 +6,52 @@
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="https://use.fontawesome.com/92c41c2648.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<title>CCMatch</title>
+		<title>Career Connect</title>
 	</head>
 	<body>
 		<div class="main-container">
-		<!-- Start of navbar -->
-		<nav class="navbar navbar-default">
-			<div class="container-fluid navbar-custom">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="row">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-						<div class="col-xs-12 phone-nav">
-							<a class="navbar-brand" href="#" id="logo">CCMatch</a>
+			<!-- Start of navbar -->
+			<nav class="navbar navbar-default">
+				<div class="container-fluid navbar-custom">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="row">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							<div class="col-xs-12 phone-nav">
+								<a class="navbar-brand" href="#" id="logo">Career Connect</a>
+							</div>
 						</div>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right navbar-right-custom">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<!-- modal button for index login -->
-							<li><button type="button" class="btn btn-info btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#loginIndex">Login</button></li>
-						</ul>
-						</div><!-- /.navbar-collapse -->
-					</div>
-					</div><!-- /.container-fluid -->
-				</nav>
-				<section>
-					<div class="container">
-						<div class="jumbotron text-center">
-							<h1><span class="fa fa-lock"></span>Welcome to CCMatch!</h1>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right navbar-right-custom">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<!-- modal button for index login -->
+								<li><button type="button" class="btn btn-info btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#loginIndex">Login</button></li>
+							</ul>
+							</div><!-- /.navbar-collapse -->
 						</div>
-					</div>
-				</section>
-				
-				<!-- icons -->
-				<div class="container">
-					
-					<div class="sticky-container">
-						<ul class="sticky">
-							<li>
-								<a href="#twitTab"> <button type="button" data-toggle="modal" data-target="#twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> </button> </a>
-								<!-- 	<a href="#twitTab"><img class="img-fluid clearfix twitter" src="img/twitter.png" data-dismiss="modal" data-toggle="modal" data-target="#twitter"></a> -->
-							</li>
-							<li>
-								<a href="#fbTab"> <button type="button" data-toggle="modal" data-target="#facebook"> <i class="fa fa-facebook-official" aria-hidden="true"></i> </button> </a>
-								<!-- <a href="#fbTab"><img class="img-fluid clearfix facebook" src="img/facebook.png" data-dismiss="modal" data-toggle="modal" data-target="#facebook"></a> -->
-							</li>
-							<li>
-								<a href="#liTab"> <button type="button" data-toggle="modal" data-target="#linkedin"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> </button> </a>
-								<!-- <a href="#liTab"><img class="img-fluid clearfix linkedin" src="img/linkedin.png" data-dismiss="modal" data-toggle="modal" data-target="#linkedin"></a> -->
-							</li>
-						</ul>
-					</div>
-					
+						</div><!-- /.container-fluid -->
+					</nav>
+					<!-- jumbotron -->
+					<section>
+						<div class="container">
+							<div class="jumbotron text-center">
+								<h1><span class="fa fa-lock"></span>Welcome to Career Connect!</h1>
+							</div>
+						</div>
+					</section>
 				</div>
-			</div>
 				<!-- login index -->
 				<div class="container">
-					<!-- Trigger the modal with a button -->
-					<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
-					<!-- Modal -->
+					
 					<div class="modal fade" id="loginIndex" role="dialog">
 						<div class="modal-dialog">
 							
@@ -84,7 +60,7 @@
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
 									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
-									<!-- <h4 class="modal-title">Modal Header</h4> -->
+									
 								</div>
 								<div class="modal-body">
 									<form class="form-signin" method="POST" action="/auth/login">
@@ -95,13 +71,14 @@
 											<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
 											<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
 											<br>
-											<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
+											<p>Don't have an account?  <a data-dismiss="modal" data-toggle="modal" data-target="#cusSignUp">Create One!</a></p>
 											<p>Forgot your password?  <a href="/contact">Click Here!</a></p>
 										</form>
 									</div>
-									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#twitter">Twitter</button>
-									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#facebook">FaceBook</button>
-									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#linkedin">LinkedIn</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#twitter">Twitter Login</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#facebook">FaceBook Login</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#linkedin">LinkedIn Login</button>
+									
 								</div>
 								
 							</div>
@@ -109,9 +86,7 @@
 					</div>
 					<!-- login Corporate -->
 					<div class="container">
-						<!-- Trigger the modal with a button -->
-						<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
-						<!-- Modal -->
+						
 						<div class="modal fade" id="corpLogin" role="dialog">
 							<div class="modal-dialog">
 								
@@ -120,7 +95,7 @@
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
-										<h4 class="modal-title">Modal Header</h4>
+										
 									</div>
 									<div class="modal-body">
 										<form class="form-signin" method="POST" action="/auth/login">
@@ -131,7 +106,7 @@
 												<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
 												<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
 												<br>
-												<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
+												<p>Don't have an account?  <a data-dismiss="modal" data-toggle="modal" data-target="#corpSignUp">Create One!</a></p>
 												<p>Forgot your password?  <a href="/contact">Click Here!</a></p>
 											</form>
 										</div>
@@ -145,9 +120,7 @@
 						</div>
 						<!-- login twitter  -->
 						<div class="container">
-							<!-- Trigger the modal with a button -->
-							<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
-							<!-- Modal -->
+							
 							<div class="modal fade" id="twitter" role="dialog">
 								<div class="modal-dialog">
 									
@@ -155,7 +128,7 @@
 									<div class="modal-content">
 										<div class="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h4 class="modal-title">Modal Header</h4>
+											
 										</div>
 										<div class="modal-body">
 											<form class="form-signin" method="POST" action="/auth/login">
@@ -165,9 +138,7 @@
 												<label class="checkbox">
 													<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
 													<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
-													<!-- <br>
-													<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
-													<p>Forgot your password?  <a href="/contact">Click Here!</a></p> -->
+													
 												</form>
 												
 											</div>
@@ -181,9 +152,7 @@
 							</div>
 							<!-- login facebook -->
 							<div class="container">
-								<!-- Trigger the modal with a button -->
-								<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
-								<!-- Modal -->
+								
 								<div class="modal fade" id="facebook" role="dialog">
 									<div class="modal-dialog">
 										
@@ -191,7 +160,7 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal">&times;</button>
-												<h4 class="modal-title">Modal Header</h4>
+												
 											</div>
 											<div class="modal-body">
 												<form class="form-signin" method="POST" action="/auth/login">
@@ -201,9 +170,7 @@
 													<label class="checkbox">
 														<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
 														<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
-														<!-- <br>
-														<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
-														<p>Forgot your password?  <a href="/contact">Click Here!</a></p> -->
+														
 													</form>
 													
 												</div>
@@ -217,9 +184,7 @@
 								</div>
 								<!-- login linkedin -->
 								<div class="container">
-									<!-- Trigger the modal with a button -->
-									<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button> -->
-									<!-- Modal -->
+									
 									<div class="modal fade" id="linkedin" role="dialog">
 										<div class="modal-dialog">
 											
@@ -227,7 +192,7 @@
 											<div class="modal-content">
 												<div class="modal-header">
 													<button type="button" class="close" data-dismiss="modal">&times;</button>
-													<h4 class="modal-title">Modal Header</h4>
+													
 												</div>
 												<div class="modal-body">
 													<form class="form-signin" method="POST" action="/auth/login">
@@ -237,9 +202,7 @@
 														<label class="checkbox">
 															<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
 															<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
-															<!-- <br>
-															<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
-															<p>Forgot your password?  <a href="/contact">Click Here!</a></p> -->
+															
 														</form>
 														
 													</div>
@@ -251,7 +214,221 @@
 											</div>
 										</div>
 									</div>
+									<!-- customer sign up -->
+									<div class="container">
+										
+										<div class="modal fade" id="cusSignUp" role="dialog">
+											<div class="modal-dialog">
+												
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														<h4 class="modal-title">Customer Sign Up</h4>
+														
+													</div>
+													<div class="modal-body">
+														<!-- <div class="panel-body"> -->
+															<form class="form-signup" method="POST" action="/auth/signup">
+																<label for="name">Name:</label>
+																<input type="text" class="form-control" name="name" placeholder="e.g. John Smith">
+																<br>
+																<label for="username">Email:</label>
+																<input type="text" class="form-control" name="username" placeholder="e.g. johnsmith@yahoo.com">
+																<br>
+																
+																<label for="password">Password:</label>
+																<input type="password" class="form-control" name="password" placeholder="6 to 20 characters">
+																<br>
+																
+																<label for="summary">Professional Summary:</label>
+																<textarea class="form-control" rows="5" name="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
+																<br>
+																
+																<input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign Up" />
+															</form>
+														<!-- </div> -->
+														
+													</div>
+													<div class="modal-footer">
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
 									</div>
+									<!-- sign up corp -->
+									<div class="container signUpCorp">
+										
+										<div class="modal fade" id="corpSignUp" role="dialog">
+											<div class="modal-dialog">
+												
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														<h4 class="modal-title">Corporate Sign Up</h4>
+													</div>
+													<div class="modal-body">
+														<!-- <div class="panel-body"> -->
+															<form action="" method="POST" role="form">
+																<div class="form-group">
+																	<label for="name">Company Name:</label>
+																	<input type="text" class="form-control" id="name" placeholder="e.g. Wood's Construction Co.">
+																</div>
+																<div class="form-group">
+																	<label for="email">Email:</label>
+																	<input type="text" class="form-control" id="email" placeholder="e.g. woodsOK@outlook.com">
+																</div>
+																
+																<div class="form-group">
+																	<label for="">Password:</label>
+																	<input type="text" class="form-control" id="password" placeholder="6 to 20 characters">
+																</div>
+																
+																<div class="form-group">
+																	<label for="">Professional Summary:</label>
+																	<textarea class="form-control" rows="5" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
+																	
+																</div>
+																<div class="form-group">
+																	<label for="" class="control-label">Your Industry (Or Industries):</label>
+																	<!-- FIRST COLUMN -->
+																	<div class="row checkbox-row">
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Accounting
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Architecture/
+																					Planning
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Banking
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Construction
+																				</label>
+																			</div>
+																		</div>
+																		<!-- SECOND COLUMN -->
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Design
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Education
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Engineering
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Graphic Design
+																				</label>
+																			</div>
+																		</div>
+																		<!-- THIRD COLUMN -->
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Hospitality
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Information Technology
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Law
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Medical
+																				</label>
+																			</div>
+																		</div>
+																		<!-- FOURTH COLUMN -->
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Music
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Real Estate
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Technology
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input type="checkbox" id="other" class="styled" value="other">
+																				<label for="other">
+																					Other
+																				</label>
+																				<input type="text" id="otherValue">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</form>
+															<br>
+															<div class="text-right">
+																<button type="submit" class="btn btn-primary btn-md" id="add-btn">Submit</button>
+															</div>
+														<!-- </div> -->
+														
+													</div>
+													<div class="modal-footer"></div>
+													
+													
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									
 								</body>
 								<script src="js/index.js"></script>
 							</html>
