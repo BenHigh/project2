@@ -19,8 +19,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT
     },
     results: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
       allowNull: false
+    },
+    big5: {
+      type: DataTypes.STRING
+    },
+    matches: {
+      type: DataTypes.TEXT
     },
     last_logon: {
       type: DataTypes.DATE

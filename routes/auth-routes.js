@@ -1,5 +1,5 @@
 var authCont = require('../controllers/authcont.js');
- 
+
 module.exports = function(app, passport) {
     // app.get('/signup', authCont.signup);
 
@@ -9,12 +9,12 @@ module.exports = function(app, passport) {
         failureFlash: true
     }));
 
-    app.get('/results', isLoggedIn, authCont.results);
+    app.get('/results', authCont.results);
 
     app.post('/auth/login', passport.authenticate('local-login', {
-        successRedirect: '/results',
-        failureRedirect: '/', 
-        failureFlash: true 
+        successRedirect: '/api/getResults',
+        failureRedirect: '/',
+        failureFlash: true
     }));
 
     app.get('/auth/logout', authCont.logout);
@@ -25,4 +25,4 @@ module.exports = function(app, passport) {
 	    }
 	    res.redirect('/');
 	}
-}
+};
