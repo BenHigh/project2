@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Corporate Login</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-12 phone-nav">
+              <a class="navbar-brand" href="#" id="logo">CCMatch Results</a>
+            </div>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              
+              <li><a href="results.html">Results</a></li>
+              
+            </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+
+          <table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody id="user">
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+        
+        <!-- <div class="container-fluid">
+          <div class='row'>
+            <div class='col-md-4'></div>
+            <div id='user' class='col-md-4'><h2>User:</h2></div>
+            <div class='col-md-4'></div>
+          </div>
+          <div class='row'>
+            <div class='col-md-4'></div>
+            <div class='col-md-4'><h3>Top Matches</h3></div>
+            <div class='col-md-4'></div>
+          </div>
+          
+          <div class="center">
+            <div class="row">
+              <div class="col-md-2"><h4><strong>ID</strong></h4></div>
+              <div class="col-md-4"><h4><strong>Company</strong></h4></div>
+              <div class="col-md-4"><h4><strong>Industry</strong></h4></div>
+              <div class="col-md-2"><h4><strong>% Match</strong></h4></div>
+            </div>
+          <br>
+          </div>
+          <div class="row">
+            <div class="col-md-2">ID</div>
+            <div class="col-md-4">Company</div>
+            <div class="col-md-4">Industry</div>
+            <div class="col-md-2">% Match</div>
+          </div>
+        </div> -->
+
+        <!-- filled by current user name -->
+       <!--  <div id='user'></div> -->
+
+        <!-- Jquery filling a bootstrap card -->
+        <button id='button'>Submit</button>
+        <div id='data'></div>
+
+        <script type="text/javascript">
+        
+        $("#button").click(function(){
+        $.ajax({
+        url: "http://www.omdbapi.com/?t=remember+the+titans&y=&plot=short&apikey=40e9cece",
+        success: function(result){
+        // $("#div1").html(result);
+        // console.log(result.Title)
+        console.log(result)
+        var count = 1;
+        for(var i=0; i < 1; i++){ //set for loop to run over
+          var html = ['<tr>',
+          '<th scope="row">4<th>',
+            '<td>' + result.Title + '</td>',
+            '<td><p>' + result.Plot + '</p></td>',
+            '<td>WE PUT A MOVIE HERE</td>',
+          '</tr>'
+        ].join('')
+
+        // var html = ['<div class="card" style="width: 20rem;">',
+        //   '<div class="card-block">',
+        //     '<h4 class="card-title">' + result.Title + '</h4>',
+        //     '<p class="card-text">' + result.Plot + '</p>',
+        //   '</div>',
+        // '</div>'
+        // ].join('') //here goes your html as a long string
+        $('#user').append(html);
+        }
+        }});
+        });
+        </script>
+      </body>
+    </html>
+
+
+
+

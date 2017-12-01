@@ -1,10 +1,10 @@
 var bCrypt = require('bcrypt-nodejs');
- 
- 
+
+
 module.exports = function(passport, user) {
- 
+
     var User = user;
- 
+
     var LocalStrategy = require('passport-local').Strategy;
 
     // used to serialize the user for the session
@@ -22,20 +22,20 @@ module.exports = function(passport, user) {
         	}
         });
     });
- 
+
     passport.use('local-signup', new LocalStrategy(
         {
             usernameField: 'username',
             passwordField: 'password',
             passReqToCallback: true // allows us to pass back the entire request to the callback
         },
- 
-        function(req, username, password, done) {
-        	console.log('here 34 passport');
+
+        function(req,  username, password, done) {
+        	  console.log('here 34 passport');
             var generateHash = function(password) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
             };
- 
+
             User.findOne({where:{username: username}}).then(function(user) {
                 if (user)
                 {
@@ -48,14 +48,15 @@ module.exports = function(passport, user) {
                         {
                             username: username,
                             password: userPassword,
-                            name: req.body.firstname + " " + req.body.lastname
+                            name: req.body.name,
+                            summary: req.body.summary
                         };
- 
+
                     User.create(data).then(function(newUser, created) {
                         if (!newUser) {
                             return done(null, false);
                         }
- 
+
                         if (newUser) {
                             return done(null, newUser);
                         }
@@ -73,8 +74,8 @@ module.exports = function(passport, user) {
     },
         function (req, username, password, done) { // callback with email and password from our form
         	var isValidPassword = function(userpass,password){
-		    	return bCrypt.compareSync(password, userpass);
-		    }
+		    	     return bCrypt.compareSync(password, userpass);
+		      }
             // find a user whose email is the same as the forms email
             // we are checking to see if the user trying to login already exists
             User.findOne({where:{username: username}}).then(function (user) {

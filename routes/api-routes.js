@@ -5,8 +5,24 @@
 var db = require("../models");
 var apiCont = require('../controllers/apicont');
 module.exports = function(app) {
-  app.get('/test', apiCont.index);
-};
+  app.get('/test', apiCont.test);
+
+
+// GET results (in JSONB format) from Watson Personality INSIGHTS &
+// UPDATES User table with
+
+// USERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+  app.get("/api/getResults/:id", apiCont.getResults);
+
+  app.get("/api/compare/:id", apiCont.compare);
+
+
+
+// COOOOOOOORRRRRRRRPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+  app.get("/api/getResultsFromURL/:id", apiCont.getResultsFromURL);
+
+
+
   // POST route for saving a new CORP
 //   app.post("/api/corps", function(req, res) {
 
@@ -85,20 +101,13 @@ module.exports = function(app) {
 //     });
 //   });
 
-//   // Get rotue for retrieving a single post
-//   app.get("/api/posts/:id", function(req, res) {
-//     // Here we add an "include" property to our options in our findOne query
-//     // We set the value to an array of the models we want to include in a left outer join
-//     // In this case, just db.Author
-//     db.Post.findOne({
-//       where: {
-//         id: req.params.id
-//       },
-//       include: [db.Author]
-//     }).then(function(dbPost) {
-//       res.json(dbPost);
-//     });
-//   });
+  // Get rotue for retrieving a single post
+
+    // Here we add an "include" property to our options in our findOne query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Author
+
+
 
 
 
@@ -126,3 +135,4 @@ module.exports = function(app) {
 //       });
 //   });
 // };
+};

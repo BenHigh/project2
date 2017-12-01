@@ -28,15 +28,18 @@ module.exports = function(sequelize, DataTypes) {
     summary: {
       type: DataTypes.TEXT,
       notEmpty: true,
-      default: "BASIC INFO CUNT"
+      // validate:
+    },
+    big5: {
+      type: DataTypes.STRING
     },
     results: {
-      type: DataTypes.STRING
+      type: DataTypes.JSONB
     },
     matches: {
-      type: DataTypes.STRING
+      type: DataTypes.TEXT
     }
   });
- 
+
   return User;
 };
