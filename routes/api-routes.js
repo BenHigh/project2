@@ -22,7 +22,7 @@ module.exports = function(app) {
   app.get("/api/getResultsFromURL/:id", apiCont.getResultsFromURL);
 
 
-  app.get('/test', apiCont.index);
+  // app.get('/test', apiCont.index);
 
 };
 
