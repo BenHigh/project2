@@ -4,124 +4,545 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://use.fontawesome.com/92c41c2648.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<title>CCMatch</title>
+		<title>Career Connect</title>
 	</head>
 	<body>
-		<!-- Start of navbar -->
-	    <nav class="navbar navbar-default">
-	      	<div class="container-fluid navbar-custom">
-	        <!-- Brand and toggle get grouped for better mobile display -->
-	        	<div class="row">
-	          		<div class="navbar-header">
-	            		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		<div class="main-container">
+			<!-- Start of navbar -->
+			<nav class="navbar navbar-default">
+				<div class="container-fluid navbar-custom">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="row">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-	            		</button>
-			            <div class="col-xs-12 phone-nav">
-			              	<a class="navbar-brand" href="#" id="logo">CCMatch</a>
-			            </div>
-			        </div>
+							</button>
+							<div class="col-xs-12 phone-nav">
+								<a class="navbar-brand" href="#" id="logo">Career Connect</a>
+							</div>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right navbar-right-custom">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<!-- modal button for index login -->
+								<li><button type="button" class="btn btn-info btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#loginIndex">Login</button></li>
+							</ul>
+							</div><!-- /.navbar-collapse -->
+						</div>
+						</div><!-- /.container-fluid -->
+					</nav>
+					</div>
 
-	          <!-- Collect the nav links, forms, and other content for toggling -->
-	          		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			            <ul class="nav navbar-nav navbar-right navbar-right-custom">
-			              <li><a href="index.html">Home</a></li>
-			              <li><a href="about.html">About</a></li>
-			              <li><a href="contact.html">Contact</a></li>
-			            </ul>
-	          		</div><!-- /.navbar-collapse -->
-	        	</div>
-	      	</div><!-- /.container-fluid -->
-	    </nav>
-		<section>
-			<div class="container">
-		        <div class="jumbotron text-center">
-		            <h1><span class="fa fa-lock"></span>Welcome to CCMatch!</h1>
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-		            <p>Please select your portal:</p>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/shake.jpg" class="shake" alt="business">
+      <div class="carousel-caption">
+        <h3>Latest News</h3>
+        <p>The inside scoop</p>
+      </div>
+    </div>
 
-		            <a href="signin.html" class="btn btn-default">
-		                <span class="fa fa-user"></span> Client Portal
-		            </a>
-		            <a href="signin.html" class="btn btn-default">
-		                <span class="fa fa-user"></span> Corporate Portal
-		            </a>
-		        </div>
-   			</div>
+    <div class="item">
+      <img src="img/innovation.jpg" class="inno" alt="innovation">
+      <div class="carousel-caption">
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="img/future.jpg" class="newB" alt="new business">
+      <div class="carousel-caption">
+        <h3>The Future Doesn't Wait!</h3>
+        <p>Neither Should You!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+ 
+ <section class="aboutUs">
+<!--  <div class="row my-4">
+        <div class="col-lg-8">
+          <img class="img1" src="img/about.jpg" alt="">
+          <div class="top-left">Mission Statement</div>
+        </div> -->
+
+
+ <div class="words">
+          <h1 class="pls">Mission Statement</h1>
+          <p class="work"><strong>Here at Career Connect we want the best path in life for you. By using natural language processing, sentiment analysis, and personality insights we pair the most compatible companies that suit you.</strong></p>
+        </div>
+        <!-- /.col-md-4 -->
+      </div>
+				</section>	
+				
+				<!-- login index -->
+				<div class="container">
+					
+					<div class="modal fade" id="loginIndex" role="dialog">
+						<div class="modal-dialog">
+							
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
+									
+								</div>
+								<div class="modal-body">
+									<form class="form-signin" method="POST" action="/auth/login">
+										<h2 class="form-signin-heading">Customer Login</h2>
+										<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
+										<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+										<label class="checkbox">
+											<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+											<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+											<br>
+											<p>Don't have an account?  <a data-dismiss="modal" data-toggle="modal" data-target="#cusSignUp">Create One!</a></p>
+											<p>Forgot your password?  <a href="/contact">Click Here!</a></p>
+										</form>
+									</div>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#twitter">Twitter Login</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#facebook">FaceBook Login</button>
+									<button type="button" class="btn btn-info btn-lg " data-dismiss="modal" data-toggle="modal" data-target="#linkedin">LinkedIn Login</button>
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<!-- login Corporate -->
+					<div class="container">
+						
+						<div class="modal fade" id="corpLogin" role="dialog">
+							<div class="modal-dialog">
+								
+								<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#corpLogin">Corporate Login</button>
+										
+									</div>
+									<div class="modal-body">
+										<form class="form-signin" method="POST" action="/auth/login">
+											<h2 class="form-signin-heading">Corporate Login</h2>
+											<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
+											<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+											<label class="checkbox">
+												<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+												<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+												<br>
+												<p>Don't have an account?  <a data-dismiss="modal" data-toggle="modal" data-target="#corpSignUp">Create One!</a></p>
+												<p>Forgot your password?  <a href="/contact">Click Here!</a></p>
+											</form>
+										</div>
+										<div class="modal-footer">
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!-- login twitter  -->
+						<div class="container">
+							
+							<div class="modal fade" id="twitter" role="dialog">
+								<div class="modal-dialog">
+									
+									<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											
+										</div>
+										<div class="modal-body">
+											<form class="form-signin" method="POST" action="/auth/login">
+												<h2 class="form-signin-heading">Twitter </h2>
+												<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
+												<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+												<label class="checkbox">
+													<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+													<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+													
+												</form>
+												
+											</div>
+											<div class="modal-footer">
+												
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- login facebook -->
+							<div class="container">
+								
+								<div class="modal fade" id="facebook" role="dialog">
+									<div class="modal-dialog">
+										
+										<!-- Modal content-->
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												
+											</div>
+											<div class="modal-body">
+												<form class="form-signin" method="POST" action="/auth/login">
+													<h2 class="form-signin-heading">FaceBook</h2>
+													<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
+													<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+													<label class="checkbox">
+														<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+														<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+														
+													</form>
+													
+												</div>
+												<div class="modal-footer">
+													
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<!-- login linkedin -->
+								<div class="container">
+									
+									<div class="modal fade" id="linkedin" role="dialog">
+										<div class="modal-dialog">
+											
+											<!-- Modal content-->
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+													
+												</div>
+												<div class="modal-body">
+													<form class="form-signin" method="POST" action="/auth/login">
+														<h2 class="form-signin-heading">Linkedin</h2>
+														<input type="text" class="form-control" name="username" placeholder="Email Address" required=""/>
+														<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+														<label class="checkbox">
+															<input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
+															<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
+															
+														</form>
+														
+													</div>
+													<div class="modal-footer"></div>
+													
+													
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<!-- customer sign up -->
+									<div class="container">
+										
+										<div class="modal fade" id="cusSignUp" role="dialog">
+											<div class="modal-dialog">
+												
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														<h4 class="modal-title">Customer Sign Up</h4>
+														
+													</div>
+													<div class="modal-body">
+														
+															<form class="form-signup" method="POST" action="/auth/signup">
+																<label for="name">Name:</label>
+																<input type="text" class="form-control" name="name" placeholder="e.g. John Smith">
+																<br>
+																<label for="username">Email:</label>
+																<input type="text" class="form-control" name="username" placeholder="e.g. johnsmith@yahoo.com">
+																<br>
+																
+																<label for="password">Password:</label>
+																<input type="password" class="form-control" name="password" placeholder="6 to 20 characters">
+																<br>
+																<label for="summary">Professional Summary:</label>
+																<textarea class="form-control" rows="5" name="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
+																<br>
+																
+																<input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign Up" />
+															</form>
+														
+														
+													</div>
+													<div class="modal-footer">
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<!-- sign up corp -->
+									<div class="container signUpCorp">
+										
+										<div class="modal fade" id="corpSignUp" role="dialog">
+											<div class="modal-dialog">
+												
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														<h4 class="modal-title">Corporate Sign Up</h4>
+													</div>
+													<div class="modal-body">
+														
+															<form action="" method="POST" role="form">
+																<div class="form-group">
+																	<label for="name">Company Name:</label>
+																	<input type="text" class="form-control" id="name" placeholder="e.g. Wood's Construction Co.">
+																</div>
+																<div class="form-group">
+																	<label for="email">Email:</label>
+																	<input type="text" class="form-control" id="email" placeholder="e.g. woodsOK@outlook.com">
+																</div>
+																
+																<div class="form-group">
+																	<label for="">Password:</label>
+																	<input type="text" class="form-control" id="password" placeholder="6 to 20 characters">
+																</div>
+																
+																<div class="form-group">
+																	<label for="">Professional Summary:</label>
+																	<textarea class="form-control" rows="1" id="summary" placeholder="Type or paste a description of your professional goals, ambitions, desired salary, etc.  You may also include any qualities that you may be looking for in a potential employer.  Must be at least 100 words."></textarea>
+																	
+																</div>
+																<div class="form-group">
+																	<label for="" class="control-label">Your Industry (Or Industries):</label>
+																	<!-- FIRST COLUMN -->
+																	<div class="row checkbox-row">
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Accounting
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Architecture/
+																					Planning
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Banking
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Construction
+																				</label>
+																			</div>
+																		</div>
+																		<!-- SECOND COLUMN -->
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Design
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Education
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Engineering
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Graphic Design
+																				</label>
+																			</div>
+																		</div>
+																		<!-- THIRD COLUMN -->
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Hospitality
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Information Technology
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Law
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Medical
+																				</label>
+																			</div>
+																		</div>
+																		<!-- FOURTH COLUMN -->
+																		<div class="col-sm-3">
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Music
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Real Estate
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input id="" class="styled" type="checkbox">
+																				<label for="">
+																					Technology
+																				</label>
+																			</div>
+																			
+																			<div class="checkbox">
+																				<input type="checkbox" id="other" class="styled" value="other">
+																				<label for="other">
+																					Other
+																				</label>
+																				<input type="text" id="otherValue">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</form>
+															<br>
+															<div class="text-right">
+																<button type="submit" class="btn btn-primary btn-md" id="add-btn">Submit</button>
+															</div>
+														
+														
+													</div>
+													<div class="modal-footer"></div>
+													
+													
+												</div>
+												
+											</div>
+										</div>
+									</div>
+
+				<section class="roundImg">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <img class="img-fluid" src="img/path.jpg" alt="opportunities">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-5">
+              <h2 class="display-4">Take control of your career path!</h2>
+              <p>There are thousands of opportunities waiting to be found! By using our methods we offer matches that are significant to you. Looking for a company closer to home? Abroad? A company that values their workplace environment? Sign up today and walk your own path! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <img class="img-fluid" src="img/Connect.jpg" alt="connect">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-5">
+              <h2 class="display-4">Connect with the Net!</h2>
+              <p>Hundreds of companies are always looking for innovators. By using our services we provide you with the most up-to-date career listings and start-ups related to your searches. Receive notifications whenever a company is looking for someone with your skill set!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <img class="img-fluid" src="img/dont.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4">Don't wait!</h2>
+              <p>Career opportunities disappear as fast as they appear! By using our services you stay ahead of the curve whenever new opportunities become available! Don't wait until tomorrow take control of your own career today! </p>
+            </div>
+          </div>
+        </div>
+      </div>
 		</section>
-		<div id="socMedCont">
-			<div class="container" ><h2>Login with Social Media</h2></div>
-			<div id="loginTab" class="container">	
-				<ul class="nav nav-pills" id="pills">
-					<li class="active icon text-center">
-						<a href="#localTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/local.png"></a>
-					</li>
+		
+		 <footer class="footer">
+      <div class="container">
+        <p class="text-center">Career Connect &copy; 2017 </p>
+      </div>
+     
+    </footer>
 
-					<li class="icon text-center">
-						<a href="#twitTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/twitter.png"></a>
-					</li>
-				
-					<li class="icon text-center">
-						<a href="#fbTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/facebook.png"></a>
-					</li>
-				
-					<li class="icon text-center">
-						<a href="#liTab" data-toggle="tab" role="tab"><img class="img-fluid" src="img/linkedin.png"></a>
-					</li>
-				</ul>
+ 
 
-				<div class="tab-content clearfix">
-					<div class="tab-pane active" id="localTab">
-				  		<form class="form-signin" method="POST" action="/auth/login">       
-					      	<h2 class="form-signin-heading">Please login</h2>
-
-					      	<input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-
-					      	<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-
-					      	<label class="checkbox">
-					        <input type="checkbox" value="remember-me" name="rememberMe"> Remember me</label>
-
-					    	<input class="btn btn-lg btn-primary btn-block" type="submit" placeholder="Login"/>
-
-					    	<br>
-					    	<p>Don't have an account?  <a href="/usignup">Create One!</a></p>
-					    	<p>Forgot your password?  <a href="/contact">Click Here!</a></p>   
-					    </form>
-					</div>
-				  	<div class="tab-pane" id="twitTab">
-				  		<form id="signin" name="signin" method="post" action="/auth/login">
-					        <label for="email">Email Address</label>
-					        <input class="text" name="email" type="text" />
-					        <label for="password">Password</label>
-					        <input name="password" type="password" />
-					        <input class="btn" type="submit" value="Sign In" />
-					    </form>
-			          	
-					</div>
-					<div class="tab-pane" id="fbTab">
-			          	<form id="signup" name="signup" method="post" action="/auth/signup">
-					        <label for="email">Email Address</label>
-					        <input class="text" name="email" type="email" />
-					        <label for="firstname">Firstname</label>
-					        <input name="firstname" type="text" />
-					        <label for="lastname">Lastname</label>
-					        <input name="lastname" type="text" />
-					        <label for="password">Password</label>
-					        <input name="password" type="password" />
-					        <input class="btn" type="submit" value="Sign Up" />
-					    </form>
-					</div>
-			        <div class="tab-pane" id="liTab">
-			          	<h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-					</div>
-				</div>
-		 	</div>
-		 </div>
-	</body>
-	<script src="js/index.js"></script>
-</html>
+								</body>
+								<script src="js/index.js"></script>
+							</html>

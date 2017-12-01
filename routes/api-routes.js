@@ -22,6 +22,9 @@ module.exports = function(app) {
   app.get("/api/getResultsFromURL/:id", apiCont.getResultsFromURL);
 
 
+  app.get('/test', apiCont.index);
+
+};
 
   // POST route for saving a new CORP
 //   app.post("/api/corps", function(req, res) {
@@ -135,4 +138,3 @@ module.exports = function(app) {
 //       });
 //   });
 // };
-};
