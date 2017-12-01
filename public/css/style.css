@@ -164,37 +164,3 @@ border-top-right-radius: 0;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-/*FERNANDO ICONS*/
-
-.sticky button {
-    list-style: none;
-    text-decoration: none;
-    border: none;
-    background:none;
-}
-
-.sticky button i{
-    font-size: 40px;
-    padding:5px 10px;
-}
-
-@media screen and (max-width: 640px) {
-  body {
-    background-color: #333;
-  }
-
-  .main-container {
-    /* Box-model */
-    width: 100%;
-    padding: 20px;
-  }
-
-  /*#main-content,
-  #sidebar {
-    width: 100%;
-  }
-
-  #sidebar {
-    margin-top: 40px;
-  }*/
-}
